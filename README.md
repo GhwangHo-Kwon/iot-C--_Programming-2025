@@ -203,11 +203,27 @@
         1. 디폴트 생성자
         2. 복사 생성자
         3. 소멸자
-- 변환 생성자 : [C1](./Day3/04_변환생성자.cpp)
+- 변환 생성자 : [C1](./Day3/04_변환생성자.cpp), [C2](./Day3/05_변환생성자2.cpp)
     - 다른 타입의 객체로 변활될 때 호출되는 생성자
     - 입력을 한개만 가지는 생성자
-    - explicit : 암묵적인 변환을 허용하지 않는다
+    - explicit : 암묵적인 변환을 허용하지 않는다 [C3](./Day3/06_변환생성자3.cpp)
         - 생성자 앞에 작성
 - 이동 생성자(Move Constructor) : [C1](./Day3/07_moveCon.cpp)
+    - r-value reference를 파라미터로 갖는 생성자
+    - l-value참조 : 레퍼런스, 일반참조
+    - r-value참조 : 변수
+    - noexcept : 예외가 발생할 수 없는 함수를 명시적으로 선언하는 것 [C2](./Day3/08_moveCon2.cpp)
+        - 이동생성자에서 메인 함수 작성 전에 사용
+            > `Human(Human&& other) noexcept { }`
 - 스태틱(static) : [C1](./Day3/09_static.cpp)
+    - 클래스의 멤버로서 객체들이 공유됨 (this 포인터가 없음)
+    - static 멤버변수 : `static int static_n;`
+        - static 멤버변수 초기화는 클래스 외부에서 이루어져야한다.
+            > int StaticTest::static_n = 10;
+    - static 멤버 함수 : `static void 변수명(입력받을 변수선언);` / [C2](./Day3/10_static2.cpp)
+        - static 멤버 함수 선언이 되면 일반 멤버의 접근은 허용되지 않음
+        - static 멤버 함수에선 static 멤버만 사용가능
+    - static 멤버 변수 사용 예 : [C3](./Day3/11_static3.cpp)
 - 연산자 오버로딩(다중정의) : [C1](./Day3/12_operator.cpp)
+    - 복사 생성자를 만드는 것과 유사
+    - 출력 값을 class 명으로 지정 후 변수 입력 값은 복사 생성자를 만드는 것와 유사함

@@ -229,3 +229,11 @@
     - 출력 값을 class 명으로 지정 후 변수 입력 값은 복사 생성자를 만드는 것와 유사함
 
 ## 4일차
+- 연산자 오버로딩 : [C1](./Day4/01_operator.cpp)
+    - 객체를 리턴 [C2](./Day4/02_operator2.cpp)
+        - 임시 객체가 생성됨
+    - 참조를 리턴 [C3](./Day4/03_constructor3.cpp)
+        - 복사 생성자로 임시객체를 만든 후 객체 생성
+        - `Point& add(const Point& other);` 함수 선언시 반환할 자료형 뒤에 `&`작성
+        - 반환시 `*this;` 작성
+    - 멤버함수 연산자 오버로딩 : [C1](./Day4/04_operator3.cpp)
